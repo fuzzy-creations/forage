@@ -1,0 +1,22 @@
+.discussion {
+    @media (max-width: 450px){ 
+        padding: 2rem;
+        }
+    &__input {
+        width: 80%;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__map {
+        height: 55vh;
+        overflow-y: scroll;
+    }
+    &__status {
+        text-align: center;
+        font-size: 1.5rem;
+        width: 100%;
+    }
+}

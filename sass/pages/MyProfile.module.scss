@@ -1,0 +1,275 @@
+.container {
+    margin: 0 auto;
+    width: 100% ;
+    background-color: transparent;
+
+      &__boxWrapper {
+        background-color: #fff;
+        border-bottom: 1px solid #dadce0;
+        height: 25rem;
+        width: 100%;
+        //border-radius: 30px 10px 10px 10px;
+        margin: 2rem 0;
+        padding-bottom: 5rem;
+        color: black;
+        font-size: 1.8rem;
+        //overflow: hidden;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 2fr repeat(3, 1fr);
+        column-gap: 2rem;
+        grid-template-areas: "img name name"
+                              "img age biotext"
+                              "img location biotext"
+                              "img groupNum biotext";
+        // align-content: center;
+        // justify-content: center;
+        align-items: start;
+        justify-items: start;
+        overflow: hidden;
+
+        @media (max-width: 450px){ 
+          height: auto;
+          padding-bottom: 0rem;
+          justify-items: center;
+          grid-template-columns: 1fr;
+          grid-template-rows: 2fr 1fr repeat(3, 0.3fr) 2fr;
+          grid-template-areas: "img"
+                              "name"
+                              "age"
+                              "location"
+                              "groupNum"
+                              "biotext"
+        }
+
+        &__avatar {
+          grid-area: img;
+          justify-self: center;
+          margin-right: 2rem;
+          img {
+              border: 2px solid #4a6cdd;
+              border-radius: 50%;
+              width: 20rem;
+              height: 20rem;
+              object-fit: cover;
+          }
+        }
+        &__name {
+          grid-area: name;
+          font-size: 4rem;
+          font-weight: 600;
+        }
+        &__age {
+          grid-area: age;
+            @media (max-width: 450px){ 
+                width: 40%;
+            }
+        }
+        &__location {
+          grid-area: location;
+            @media (max-width: 450px){ 
+                width: 40%;
+            }
+        }
+        &__groupNum {
+          grid-area: groupNum;
+            @media (max-width: 450px){ 
+                width: 40%;
+            }
+        }
+  
+        &__bioText {
+          grid-area: biotext;
+          font-size: 1.5rem;
+          height: 100%;
+          overflow: hidden;
+
+          @media (max-width: 450px){ 
+            width: 80%;
+        }
+          & h3 {
+            font-weight: 400;
+            align-self: end;
+          }
+          & p {
+            overflow: hidden;
+            font-size: 1.2rem;
+          }
+        }
+        &__icon {
+          margin-right: 2rem;
+          vertical-align: middle;
+          svg {
+            font-size: 2rem;
+          }
+          
+        }
+
+        
+      }
+
+      &__header {
+          text-align: left;
+          font-size: 2rem;
+          color: black;
+          width: 95%;
+          margin: 2rem auto;
+          font-weight: bold;
+          @media (max-width: 450px){ 
+            width: 75%;
+            font-size: 2.5rem;
+            margin: 2rem 0 2rem 6rem;
+  
+          }
+      }
+}
+
+.groupsWrapper { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 21rem));
+    
+    gap: 2rem;
+    align-content: start;
+    align-items: center;
+    @media (max-width: 450px){ 
+      // justify-content: center;
+      padding: 0 3rem;
+    }
+    @media (max-width: 400px){ 
+      // justify-content: center;
+      padding: 0;
+    }
+}
+
+
+
+.phantom {
+    margin: 0 auto;
+    width: 100% ;
+    background-color: transparent;
+
+      &__boxWrapper {
+        background-color: #fff;
+        border-bottom: 1px solid #dadce0;
+        height: 25rem;
+        width: 100%;
+        //border-radius: 30px 10px 10px 10px;
+        margin: 2rem 0;
+        padding-bottom: 5rem;
+        color: black;
+        font-size: 1.8rem;
+        //overflow: hidden;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 2fr repeat(3, 1fr);
+        row-gap: 2rem;
+        column-gap: 2rem;
+        grid-template-areas: "img name name"
+                              "img age biotext"
+                              "img location biotext"
+                              "img groupNum biotext";
+        // align-content: center;
+        // justify-content: center;
+        // align-items: start;
+        // justify-items: start;
+        overflow: hidden;
+
+        @media (max-width: 450px){ 
+          height: auto;
+          padding-bottom: 0rem;
+          justify-items: center;
+          grid-template-columns: 1fr;
+          grid-template-rows: 2fr 1fr repeat(3, 0.3fr) 2fr;
+          grid-template-areas: "img"
+                              "name"
+                              "age"
+                              "location"
+                              "groupNum"
+                              "biotext"
+        }
+
+        &__avatar {
+          grid-area: img;
+          background-color: rgb(200, 200, 200);
+          justify-self: center;
+          margin-right: 2rem;
+          //border: 2px solid #4a6cdd;
+          border-radius: 50%;
+          width: 20rem;
+          height: 20rem;
+          object-fit: cover;
+        }
+        &__name {
+          grid-area: name;
+          background-color: rgb(200, 200, 200);
+          font-size: 4rem;
+          font-weight: 600;
+        }
+        &__age {
+          width: 70%;
+          background-color: rgb(200, 200, 200);
+          grid-area: age;
+            @media (max-width: 450px){ 
+                width: 30%;
+            }
+        }
+        &__location {
+          width: 70%;
+          background-color: rgb(200, 200, 200);
+          grid-area: location;
+            @media (max-width: 450px){ 
+                width: 30%;
+            }
+        }
+        &__groupNum {
+          width: 70%;
+          background-color: rgb(200, 200, 200);
+          grid-area: groupNum;
+            @media (max-width: 450px){ 
+                width: 30%;
+            }
+        }
+      
+        &__bioText {
+          background-color: rgb(200, 200, 200);
+          grid-area: biotext;
+          font-size: 1.5rem;
+          @media (max-width: 450px){ 
+              width: 80%;
+          }
+          & h3 {
+            background-color: rgb(200, 200, 200);
+            grid-area: biotitle;
+            font-weight: 400;
+            align-self: end;
+          }
+          & p {
+            overflow: hidden;
+            color: yellow;;
+          }
+        }
+        &__icon {
+          background-color: rgb(200, 200, 200);
+          margin-right: 2rem;
+          vertical-align: middle;
+          svg {
+            font-size: 2rem;
+          }
+          
+        }
+
+        
+      }
+
+      &__header {
+        background-color: rgb(200, 200, 200);
+          text-align: left;
+          font-size: 2rem;
+          color: black;
+          width: 95%;
+          margin: 2rem auto;
+          font-weight: bold;
+      }
+}

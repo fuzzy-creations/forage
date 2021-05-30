@@ -1,0 +1,265 @@
+$color-white: #fff;
+$color-black: #000;
+
+*:focus {
+    outline: none;
+}
+
+.form {       
+    margin: 0 auto;
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url();
+    background-size: 100%;
+    border-radius: 8px;
+    //box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    border: 1px solid #dadce0;
+    width: 35rem;
+    height: 44.8rem;
+    padding: 3rem 5rem;
+    margin-top: 5%;
+
+    @media (max-width: 450px){ 
+        width: 100vw;
+        height: 100vh;
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    } 
+
+    &__grid {
+        display: grid;
+        gap: 0 1rem;
+        grid-template-columns: 40px 1fr 40px;
+        align-items: center;
+        justify-items: center;
+        grid-template-areas: 
+                             " first first first "
+                             " surname surname surname "
+                             " dateLabel date toggle1 "
+                             " find locText toggle2 "
+                             " . cont cont ";
+
+        &__first {grid-area: first;}
+        &__surname {grid-area: surname;}
+        &__date {grid-area: date; justify-self: stretch;}
+        &__dateLabel {grid-area: dateLabel; justify-self: start;}
+        &__toggle1 {grid-area: toggle1;}
+        &__toggle2 {grid-area: toggle2;}
+        &__find {grid-area: find;}
+        &__locText {grid-area: locText; justify-self: stretch;}
+        &__cont {grid-area: cont;}
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+    }
+    &__wrapper2 {
+        height: 67%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+        @media (max-width: 450px){ 
+            height: none;
+        }
+    }
+
+    &__header {
+        &__title {
+            font-weight: 400;
+        }
+
+        &__logo {
+            img {
+                width: 35px;
+                height: auto;
+            }
+        }
+    }
+  
+    &__input {
+        width: 100%;
+        display: block;
+        margin: 1rem 0 !important;
+
+        &:focus {
+            
+        }
+    }  
+
+    &__switch {
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 1.5rem;
+        display: block;
+        margin-top: 2rem;
+        a,
+        a:active, 
+        a:visited {
+            display: inline-block;
+            color: blue;
+            text-decoration: none;
+            font-size: 1.2rem;
+            width: auto;
+            padding: 0.5rem;
+            border-radius: 10px;
+            &:hover {
+                background-color: #eeeeee;
+            }
+        }
+    }
+
+    &__date {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 1rem;
+        background-color: #f7f7f7;
+        &__label {
+            display: block;
+        }
+    }
+
+    &__about {
+        &__text {
+            line-height: 0;
+        }
+    }
+
+    &__avatar {
+        text-align: center;
+        width: 85px;
+        &__image {
+            img {
+                background-color: #414141;
+                border-radius: 50%;
+                width: 5rem;
+                height: 5rem;
+                padding: 0.2rem;
+            }
+        }
+        &__loader {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            background-color: gray;
+        }
+    }
+
+    &__address {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #eeeeee;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border-radius: 0 0 20px 20px;
+    
+        &__find {
+            font-size: 5rem;
+            margin-right: 1rem;
+            padding: 0.5rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            svg {
+                color: #2998ff;
+                height: 2rem;
+                width: 2rem;
+            }
+
+            &:hover {
+                background-color: #eeeeee;
+            }
+        }
+        &__text {
+            font-size: 1.5rem;
+            //width: 200px;
+        }
+        &__toggle {
+            //background-color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 0;
+            &__text {
+                text-align: center;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    &__btngroup {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+}
+
+.stageTwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
+    &Options {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        &__btn {
+            cursor: pointer;
+            text-align: center;
+            padding: 0.5rem;
+            border-radius: 15px;
+            color: #ff5c4a;
+            font-size: 1.5rem;
+            width: 20rem;
+            background-color: #fafafa;
+            border: 2px solid #ff5c4a;  
+            margin-bottom: 1rem;   
+        }
+        &__options {
+            cursor: pointer;
+            color: #ff5c4a;
+            text-align: center;
+            font-size: 1.2rem;
+            width: 20rem;
+        }
+    }
+
+    &__icon {
+        text-align: center;
+        justify-self: flex-start;
+        svg {
+            font-size: 10rem;
+            color: #ff5c4a;
+        }
+    }
+    &__text {
+        text-align: center;
+        font-size: 2rem;
+    }
+    &__row {
+        position: relative;
+    }
+    &__toggle {
+            
+        position: absolute;
+        right: 5px;
+        top: -3px;
+
+    }
+    &__location {
+        font-size: 3rem;
+        text-align: center;
+        flex-basis: 400px;
+    }
+}
+

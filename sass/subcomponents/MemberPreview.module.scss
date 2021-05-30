@@ -1,0 +1,132 @@
+.container {
+    width: 45%;
+    font-size: 1.5rem;
+    & a {
+        text-decoration: none;
+
+    }
+    @media (max-width: 1000px){
+        width: 100%;
+    }
+ 
+}
+
+.mainWrapper {
+    display: grid;
+    border-radius: 10px;  
+    border: 0.5px solid #dadce0;
+    background-color: #ffffff;
+    padding: 0 2rem;
+    height: 11rem;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 5fr 1fr;
+    justify-items: start;
+    align-content: center;
+    align-items: center;
+    column-gap: 2rem;
+    grid-template-areas: "img name ."
+                        "img location .";
+
+}
+
+.image {
+    grid-area: img;
+    align-self: center;
+    justify-self: center;
+    padding-right: 1rem;
+    width: 8rem;
+    height: 8rem;
+    
+    & img {
+        background-color: blue;
+        border-radius: 10px;
+        border: 1px solid #4a6cdd;
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
+.username {
+    grid-area: name;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+    align-self: flex-end;
+    a {
+        color: inherit;
+    }
+
+}
+
+.location {
+    grid-area: location;
+    font-size: 1.5rem;
+    color: gray;
+    align-self: flex-start;
+  
+}
+
+.remove {
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all .2s;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    height: 3.9rem;
+    width: 3.9rem;
+    color: #ff5c4a;
+    border: 2px solid #ff5c4a;
+    background-color: #fff;
+    cursor: pointer;
+    &:hover {
+        background-color: #ff5c4a;
+        color: #fff;
+    }
+}
+
+.menu__wrapper {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: -3px;
+    right: 0px;
+    width: 9rem;
+    height: 7rem;
+    border: 0.5px solid #dadce0;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    &__wrapper {
+        color: gray;
+        cursor: pointer;
+        svg {
+            font-size: 2rem;
+        }
+        &:hover {
+            color: rgb(92, 92, 92);
+        }
+    }
+    &__list {
+        text-align: center;
+        width: 100%;
+        list-style: none; 
+        &__item {
+            width: 100%;
+            &:hover {
+                background-color: #eeeeee;
+            }
+        }    
+    }
+}
+
+@keyframes menu {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}

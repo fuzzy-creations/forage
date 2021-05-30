@@ -1,0 +1,78 @@
+.groupTile {
+    margin: 1rem;
+    width: 100%;  
+    max-width: 200px;
+    color: #4a6cdd;
+    position: relative;
+    @media (max-width: 450px){ 
+        margin: 0;
+      }
+
+    & a {
+        text-decoration: none;
+        color: #4a6cdd;
+    }
+    
+    &__wrapper {
+        padding: 2.5rem 2.5rem 2rem 2.5rem;
+        border-radius: 0 0 30px 0;
+        height: 16rem;
+        align-content: center;
+        text-align: left;
+        //border: 1px solid #e6ecf0;
+        //box-shadow: 0 0 1px 0 #66757f;
+        background-color: #f4f8fb;
+
+
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr;
+        
+
+        &__image {
+            position: absolute;
+            top: -17%;
+            left: 11%;
+            padding: 1rem;
+            width: 5.5rem;
+            height: 5.5rem;
+            border: 1.5px solid #fff;
+            border-radius: 100px;
+            //z-index: 2;
+            box-shadow: 0 0.5px 0.5px 0.5px #66757f;
+            background-size: cover;
+            background-color: #fff;
+            background-position: center;
+        }
+
+        &__header {
+            margin-top: 1rem;
+            font-size: 1.6rem;
+            font-weight: bold;
+            overflow: hidden;
+            a {
+                text-decoration: none;
+            }
+        }
+
+        &__para {
+            overflow: hidden;
+            font-size: 1.1rem;
+            color: black;
+        }
+
+        &__footer {
+            color: gray;
+            align-self: end;
+            display: flex;
+            justify-content: space-around;
+            // & span {
+            //   margin: 0 2rem;
+            // }
+        }
+    }   
+}
+
+.groupTile:hover .groupTile__wrapper {
+    background-color: #e6ecf0;
+}

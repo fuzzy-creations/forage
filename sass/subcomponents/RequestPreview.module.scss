@@ -1,0 +1,93 @@
+.requestPreview {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    & a {
+        text-decoration: none;
+    }
+    &__container {
+        display: grid;
+        padding: 0 2rem;
+        border-radius: 30px 10px 10px 10px;  
+        background-color: rgb(244, 248, 251);
+        border: 0.5px solid #e6ecf0b6;
+        padding-top: 1rem;
+        height: 80px;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr 3fr 3fr 1fr;
+        justify-items: start;
+        align-items: start;
+        grid-template-areas: "img name reqtype btn1"
+                            "img location reqname btn2";   
+        @media (max-width: 600px){ 
+            grid-template-rows: 20px 20px 20px;
+        }
+    }
+    &__image {
+        grid-area: img;
+        align-self: center;
+        justify-self: center;
+        padding-right: 1rem;
+        
+        & img {
+            width: 6rem;
+            background-color: blue;
+            height: 6rem;
+            border-radius: 15px;
+        }
+    }
+
+    &__username {
+        grid-area: name;
+        font-size: 2rem;
+        text-decoration: none;
+        color: black;
+        a {
+            color: inherit;
+        }
+    
+    }
+    
+    &__location {
+        grid-area: location;
+        font-size: 1.5rem;
+        color: gray;
+    }
+    
+    &__reqname {
+        grid-area: reqname;
+        text-transform: capitalize;
+        //font-weight: 400;
+    }
+    
+    &__reqtype {
+        grid-area: reqtype;
+        text-transform: capitalize;
+        color: gray;
+    }
+    
+    &__btn {
+        cursor: pointer;
+        border: 0.5px solid #e6ecf0b6;
+        border-radius: 5px;
+        width: 7rem;
+        height: 2.5rem;
+        color: #fff;
+        font-size: 1.2rem;
+        &:hover {
+            opacity: 0.8;
+        }
+        &__accept {
+            grid-area: btn1;
+            background-color: #4a6cdd;
+        }
+        &__decline {
+            grid-area: btn2;
+            background-color: #ff5c4a;
+        }
+    }
+
+ 
+}
+

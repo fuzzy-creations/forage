@@ -1,0 +1,223 @@
+.container {
+  margin: 0 auto;
+  width: 100%;
+  background-color: transparent;
+  padding: 2rem;
+}
+
+
+.banner {
+  width: 100%;
+  min-height: 120px;
+  max-height: 120px;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  color: #707070;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr 1fr;
+  grid-template-columns: 0.8fr 1fr 1.5fr 1fr;
+  grid-template-areas: "logo name name details"
+                        "logo name name details"
+                        "logo type . details"
+                        "location about about button";
+  align-items: center;
+
+    &__logo {
+      grid-area: logo;
+      justify-self: center;
+      @media (max-width: 450px){ 
+        margin-right: 1rem;
+      } 
+      & img {
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+        background-color: #4a6cdd;
+        border-radius: 50px;
+        height: 9rem;
+        width: 9rem;
+        border: 2px solid #4a6cdd;
+      }
+     
+    }
+
+    &__name {
+      grid-area: name;
+      font-size: 4rem;
+      font-weight: 500;
+      color: black;
+      overflow: hidden;
+      @media (max-width: 450px){ 
+        font-size: 3rem;
+        line-height: 1;
+    } 
+    }
+    &__type {
+      grid-area: type;
+      align-self: start;
+      font-weight: 400;
+      margin-top: -1rem;
+      text-transform: capitalize;
+      @media (max-width: 450px){ 
+        margin-top: -0.5rem;
+  } 
+    }
+    &__button {
+      grid-area: button;
+      padding: 0.8rem 0;
+      border-radius: 30px;
+      background-color: #4a6cdd;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+      white-space: nowrap;
+      text-align: center;
+      justify-self: start;
+      transition: all 0.2s ease-out;
+      width: 10rem;
+      &:hover {
+        transform: scale(1.05);
+      }
+      
+    }
+    &__location {
+      grid-area: location;
+      justify-self: center;
+      font-weight: 400;
+      svg {
+        vertical-align: middle;
+      }
+    }
+    &__about {
+      grid-area: about;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1;
+      height: 100%;
+    }
+    &__details {
+      grid-area: details;
+      font-size: 1.1rem;
+      // justify-self: end;
+      &__upcoming {
+        margin: 0.5rem 0;
+      }
+    }
+    &__divider {
+      width: 80%;
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+      margin: 0 auto;
+    }
+                           
+}
+.events {
+
+  &__grid {
+    width: 100%;
+    margin: 0 auto;
+
+  }
+
+  &__header { 
+    font-size: 2rem;
+    color: #707070;
+    margin-left: 4rem;
+  }
+
+  &__view {
+    text-transform: uppercase;
+    color: blue;
+    text-align: right;
+    cursor: pointer;
+    width: 6rem;
+    float: right;
+  }
+}
+
+
+.group {
+  &__private {
+    grid-area: private;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    &__icon {
+        color: gray;
+        svg {
+            font-size: 3rem;
+        }
+    }
+    &__text {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #707070;
+    }
+    &__para {
+        font-size: 1.2rem;
+        color: #707070;
+    }
+}
+}
+
+
+
+// .pagecontent {
+//     background-color: #fff;
+//     @media (max-width: 600px){ 
+//         grid-template-columns: 1fr;
+//       }
+// }
+
+
+
+
+
+.adminCreate {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,199 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50px minmax(245px, 1fr);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    overflow: hidden;
+
+    @media (max-width: 450px){ 
+        grid-template-columns: 25px minmax(245px, 1fr);
+        width: 90%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+ 
+}
+
+.mainWrapper {
+    display: grid;
+    border-radius: 30px 10px 10px 10px;   
+    background-color: rgb(244, 248, 251);
+    border: 0.5px solid #e6ecf0b6;
+    padding-top: 1rem;
+    height: 90px;
+    width: 100%;
+    column-gap: 1rem;
+    grid-column: 2 / 3;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 10rem 0.5fr repeat(3, 1fr);
+    justify-items: start;
+    align-items: start;
+    grid-template-areas: "img name name distance joinBtn"
+                        "img about about about slots"
+                        "img time place group viewPage";
+
+    @media (max-width: 450px){ 
+        padding-top: 0;
+        //grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "img name name name slots"
+                            "img time distance distance joinBtn"
+                        "img place place place group";
+        align-items: center;
+        height: 70px;
+        }
+}
+
+.mainWrapper:hover .joinBtn .joinBtn__icon svg {
+    transform: translateX(10px) scale(1.15);
+}
+
+.image {
+    grid-area: img;
+    align-self: center;
+    justify-self: center;
+    @media (max-width: 450px){ 
+        padding: 0;
+    }
+    
+    & img {
+        width: 7rem;
+        background-color: #fff;
+        height: 7rem;
+        border: 0.5px solid #dadce0;
+        border-radius: 25px 5px 5px 5px;
+    }
+}
+
+.distance {
+    grid-area: distance;
+    font-size: 1.3rem;
+    color: grey;
+    svg {
+        vertical-align: middle;
+    }
+}
+
+.slots {
+    grid-area: slots;
+    color: black;
+    font-size: 1.25rem;
+    align-self: center;
+
+}
+
+.sideWrapper {
+    grid-column: 1 / 2; 
+  
+}
+
+.date {
+    font-size: 2.5rem;
+    color: black;
+}
+
+.month {
+    font-size: 1.5rem;
+    margin-top: -1rem;
+    color: black;
+}
+
+.bottomInfo {
+    grid-area: bottom;
+    color: navy;
+    font-size: 1.3rem; 
+}
+
+.time {
+    //padding-right: 5rem;
+    grid-area: time;
+    display: inline-block;
+    color: black;
+}
+
+
+.street {
+    grid-area: place;
+    //padding-right: 5rem;
+    color: navy;
+    font-size: 1.3rem;
+    display: inline-block;
+    overflow: hidden;
+   
+}
+
+.groupname {
+    grid-area: group;
+    color: navy;
+    font-size: 1.3rem;
+    display: inline-block;
+}
+
+.viewPage {
+    grid-area: viewPage;
+    color: blue;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    @media (max-width: 450px){ 
+        display: none;
+        }
+}
+
+.joinBtn {
+    grid-area: joinBtn;
+    border: 0.5px solid #e6ecf0b6;
+    background-color: #ff5c4a;
+    border-radius: 5px;
+    width: 8rem;
+    font-weight: 400;
+    text-align: center;
+    a {
+        color: #fff;
+        font-size: 1.2rem;
+        text-decoration: none;
+    }
+    &__icon {   
+        svg {
+            transition: all 0.2s ease-in-out;
+            vertical-align: middle;
+        }
+    }
+    &__text {
+
+    }
+    // &:hover .joinBtn__icon svg {
+    //     transform: translateX(10px) scale(1.15);
+    // }
+    
+}
+
+.eventname {
+    grid-area: name;
+    font-weight: bold;
+    color: navy;
+    overflow: hidden;
+    text-decoration: none;
+
+}
+
+.about {
+    grid-area: about;
+    text-align: left;
+    font-size: 1.1rem;
+    overflow: hidden;
+    word-breaK:break-all;
+    line-height: 1.2;
+    text-overflow: ellipsis;
+    height: 2.8rem;
+    color: black;
+    @media (max-width: 450px){ 
+        display: none;
+        }
+
+}
+

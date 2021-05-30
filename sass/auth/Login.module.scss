@@ -1,0 +1,124 @@
+// Colours
+$color-primary: #55c57a;
+$color-primary-dark: #28b485;
+$color-primary-light: #7ed56f;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-turtle-light: #2998ff;
+$color-turtle-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+
+// Font
+
+$default-font-size: 1.6rem;
+
+// Grid
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
+
+
+
+.form {
+    width: 100%;
+    
+    &__container {
+        margin: 0 auto;
+        background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url();
+        background-size: 100%;
+        border-radius: 40px 15px 15px 15px;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+        height: 45rem;
+        width: 35rem;
+        text-align: center;
+        margin-top: 5rem;
+    }
+
+    &__image {
+        width: 12rem;
+        height: 12rem;
+        background-position: center;
+        background-size: cover;
+        border-radius: 50px;
+        margin: 0 auto;
+        padding: 3rem;
+        box-shadow:inset 0 0 20px 10px #fff;
+
+        &::after {
+            background-color: red;
+            padding: 50rem;
+            width: 15rem;
+            height: 15rem;
+        }
+    }
+
+
+    &__group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__header {
+        font-size: 27px;
+        line-height: 32px;
+        font-weight: bold;
+        color: #14171a;
+    }
+  
+    &__input {
+        margin: 0 auto;
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color-white, .5);
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+        transition: all .3s;
+        border: purple !important;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: 3px solid $color-primary;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-secondary-dark;
+        }
+    
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-2;
+        }
+
+    }
+
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        // display: block;
+        transition: all .3s;
+        color: black;
+    }
+
+  
+    
+}
+
